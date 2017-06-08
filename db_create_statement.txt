@@ -1,0 +1,38 @@
+CREATE TABLE users
+(
+  user_id serial NOT NULL,
+  username character varying(1024) NOT NULL,
+  email character varying(1024) NOT NULL,
+  password character varying(1024) NOT NULL,
+  role character varying(1024) NOT NULL,
+  faculty_id serial NOT NULL,
+  CONSTRAINT user_pk PRIMARY KEY (user_id),
+  CONSTRAINT faculty_user_fkey FOREIGN KEY (faculty_id)
+     REFERENCES faculties (faculty_id)
+);
+
+CREATE TABLE faculties
+(
+  faculty_id serial NOT NULL,
+  faculty_name character varying(1024) NOT NULL,
+  faculty_letter character varying(128) NOT NULL,
+  contact character varying(1024) NOT NULL
+ 
+);
+
+CREATE TABLE fs_events
+(
+  fs_event_id serial NOT NULL,
+  title character varying(1024) NOT NULL,
+  location character varying(1024) NOT NULL,
+  user_id serial NOT NULL,
+  createdate timestamp with time zone NOT NULL,
+  fseventdate timestamp with time zone NOT NULL,
+  faculty_id serial NOT NULL,
+  description character varying(4096) NOT NULL,
+  CONSTRAINT fs_event_pk PRIMARY KEY (fs_event_id),
+  CONSTRAINT fs_event_user_id_fkey FOREIGN KEY (user_id)
+     REFERENCES users (user_id),
+  CONSTRAINT faculty_fs_event_fkey FOREIGN KEY (faculty_id)
+     REFERENCES faculties (faculty_id)
+);

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Environment name="PMAWebServer" value="true" type="java.lang.Boolean" override="false"/>
+    <Environment name="projectPath" value="C:/Users/Ich/Documents/PMAWorkspace/PMAWebServer/WebContent" type="java.lang.String" override="false"/>
+    <Environment name="configPath" value="/config" type="java.lang.String" override="false"/>
+
+	<Resource name="jdbc/libraryDB" auth="Container" type="javax.sql.DataSource"
+			driverClassName="org.postgresql.Driver"
+	        url="jdbc:postgresql://141.19.96.94/ss17-gruppe4_DB"
+   		    username="ss17-gruppe4"
+    		password="Xjsgqcz4"
+   		    maxActive="10" maxIdle="2" maxWait="-1" />
+    		      
+</Context>
