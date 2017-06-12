@@ -89,7 +89,7 @@ public class Login extends HttpServlet {
 
     	// jlog.info("Incomming connection at " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));	
     	
-    	System.out.println("Incomming connection!");
+    	System.out.println("Incomming connection in Login-Servlet!");
         Connection connection = null;
         Statement statment = null;
         ResultSet result;
