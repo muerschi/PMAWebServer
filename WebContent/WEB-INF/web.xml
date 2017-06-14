@@ -9,8 +9,24 @@
     <servlet-name>Login</servlet-name>
     <servlet-class>servlets.Login</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Event</servlet-name>
+    <servlet-class>servlets.Event</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>DeleteEvent</servlet-name>
+    <servlet-class>servlets.DeleteEvent</servlet-class>
+  </servlet>
    <servlet-mapping>
+    <servlet-name>Event</servlet-name>
+    <url-pattern>/event</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
     <servlet-name>Login</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>DeleteEvent</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>  
 </web-app>
