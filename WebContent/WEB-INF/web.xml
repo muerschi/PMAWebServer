@@ -14,7 +14,12 @@
   <servlet>
     <servlet-name>DeleteEvent</servlet-name>
     <servlet-class>servlets.DeleteEvent</servlet-class>
+  </servlet>  
+  <servlet>
+    <servlet-name>Event</servlet-name>
+    <servlet-class>servlets.Event</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>Fachschaften</servlet-name>
     <url-pattern>/fachschaft</url-pattern>
